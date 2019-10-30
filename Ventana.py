@@ -21,9 +21,9 @@ class mostrar():
         self.texto.pack(padx=0, pady=0)
         self.texto.place(x=9, y=9)
         self.dato = Entry(self.root, text="validar")
-        self.dato.place(x=10, y=40)
+        self.dato.place(x=300, y=16)
         self.boton = Button(self.root, text="Validar", fg="red", command=self.iniciarAutomata)
-        self.boton.place(x=150, y=40)
+        self.boton.place(x=340, y=40)
         self.root.mainloop()
 
     def validar(self):
@@ -60,6 +60,14 @@ class mostrar():
         self.__pila = Pila()
         self.transicionA = -1
         self.generarPila()
+
+        self.canvas = Canvas(width=380, height=220, bg="#ECEE38")
+        self.canvas.pack(expand=NO)
+        self.canvas.place(x=20, y=160)
+        self.boton = Button(self.root, text="Fast")
+        self.boton.place(x=450, y=200)
+        self.boton = Button(self.root, text="Slow")
+        self.boton.place(x=450, y=250)
 
         self.canvas = Canvas(width=380, height=220, bg="#ECEE38")
         self.canvas.pack(expand=NO)
